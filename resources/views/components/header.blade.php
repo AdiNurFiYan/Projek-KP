@@ -31,29 +31,39 @@
                @if(request()->is('data-barang')) aria-current="page" @endif>
                Data Barang
             </a>
+            <a href="/about" 
+           class="text-white block px-3 py-2 rounded-md text-base transition duration-300 {{ request()->is('about') ? 'bg-[#FFB930]' : 'hover:bg-[#FF1515]' }}"
+           @if(request()->is('about')) aria-current="page" @endif>
+           About
+        </a>
         </nav>
     </div>
 
     <!-- Mobile Navigation Menu -->
     <div id="mobile-menu" class="hidden md:hidden absolute w-full">
-        <div class="px-2 pt-2 pb-3 space-y-1 bg-[#E40004] shadow-lg">
-            <a href="/" 
-               class="text-white block px-3 py-2 rounded-md text-base transition duration-300 {{ request()->is('/') ? 'bg-[#FFB930]' : 'hover:bg-[#FF1515]' }}"
-               @if(request()->is('/')) aria-current="page" @endif>
-               Home
-            </a>
-            <a href="{{ route('tingkatan-sekolah') }}" 
-               class="text-white block px-3 py-2 rounded-md text-base transition duration-300 {{ request()->routeIs('tingkatan-sekolah') ? 'bg-[#FFB930]' : 'hover:bg-[#FF1515]' }}"
-               @if(request()->routeIs('tingkatan-sekolah')) aria-current="page" @endif>
-               Data Sekolah
-            </a>
-            <a href="/data-barang" 
-               class="text-white block px-3 py-2 rounded-md text-base transition duration-300 {{ request()->is('data-barang') ? 'bg-[#FFB930]' : 'hover:bg-[#FF1515]' }}"
-               @if(request()->is('data-barang')) aria-current="page" @endif>
-               Data Barang
-            </a>
-        </div>
+    <div class="px-2 pt-2 pb-3 space-y-1 bg-[#E40004] shadow-lg">
+        <a href="/" 
+           class="text-white block px-3 py-2 rounded-md text-base transition duration-300 {{ request()->is('/') ? 'bg-[#FFB930]' : 'hover:bg-[#FF1515]' }}"
+           @if(request()->is('/')) aria-current="page" @endif>
+           Home
+        </a>
+        <a href="{{ route('tingkatan-sekolah') }}" 
+           class="text-white block px-3 py-2 rounded-md text-base transition duration-300 {{ request()->routeIs('tingkatan-sekolah') ? 'bg-[#FFB930]' : 'hover:bg-[#FF1515]' }}"
+           @if(request()->routeIs('tingkatan-sekolah')) aria-current="page" @endif>
+           Data Sekolah
+        </a>
+        <a href="/data-barang" 
+           class="text-white block px-3 py-2 rounded-md text-base transition duration-300 {{ request()->is('data-barang') ? 'bg-[#FFB930]' : 'hover:bg-[#FF1515]' }}"
+           @if(request()->is('data-barang')) aria-current="page" @endif>
+           Data Barang
+        </a>
+        <a href="/about" 
+           class="text-white block px-3 py-2 rounded-md text-base transition duration-300 {{ request()->is('about') ? 'bg-[#FFB930]' : 'hover:bg-[#FF1515]' }}"
+           @if(request()->is('about')) aria-current="page" @endif>
+           About
+        </a>
     </div>
+</div>
 </div>
 
 <!-- Spacer untuk kompensasi fixed header -->

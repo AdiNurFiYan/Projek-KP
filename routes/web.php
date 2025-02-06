@@ -20,6 +20,11 @@ Route::get('/', function () {
     return view('pages.home');
 })->name('dashboard');
 
+// About route
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('about');
+
 // School Level Management
 Route::prefix('tingkatan-sekolah')->group(function () {
     Route::get('/', [KorwilController::class, 'index'])->name('tingkatan-sekolah');
