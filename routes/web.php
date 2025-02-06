@@ -8,6 +8,7 @@ use App\Http\Controllers\SekolahController;
 use App\Http\Controllers\DetailSarprasController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,10 +21,15 @@ Route::get('/', function () {
     return view('pages.home');
 })->name('dashboard');
 
-// About route
-Route::get('/about', function () {
-    return view('pages.about');
-})->name('about');
+// About routes
+Route::prefix('about')->group(function () {
+    Route::get('/', [AboutController::class, 'index'])->name('about');
+    Route::post('/update', [AboutController::class, 'update'])->name('about.update');
+    Route::post('/leader', [AboutController::class, 'storeLeader'])->name('about.leader.store');
+    Route::put('/leader/{id}', [AboutController::class, 'updateLeader'])->name('about.leader.update');
+    Route::delete('/leader/{id}', [AboutController::class, 'deleteLeader'])->name('about.leader.delete');
+    Route::get('/leader/{id}', [AboutController::class, 'getLeader'])->name('about.leader.get');
+});
 
 // School Level Management
 Route::prefix('tingkatan-sekolah')->group(function () {

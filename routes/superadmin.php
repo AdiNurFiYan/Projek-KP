@@ -10,6 +10,7 @@ use App\Http\Controllers\SuperAdmin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\SuperAdmin\SuperAdminBarangController;
 use App\Http\Controllers\SuperAdmin\SuperAdminDashboardController;
 use App\Http\Controllers\SuperAdmin\SuperAdminAkunController;
+use App\Http\Controllers\SuperAdmin\SuperAdminAboutController;
 
 Route::prefix('super-admin')->name('super-admin.')->group(function () {
     // Guest routes (login)
@@ -46,6 +47,15 @@ Route::prefix('super-admin')->name('super-admin.')->group(function () {
         Route::controller(SuperAdminSekolahController::class)->prefix('data')->name('data.')->group(function () {
             Route::get('/sekolah', 'datasekolah')->name('sekolah');
             Route::get('/{korwil}', 'index')->name('index');
+        });
+
+        Route::controller(SuperAdminAboutController::class)->group(function () {
+            Route::get('/about', 'index')->name('about');
+            Route::post('/about/leader/add', 'updateLeader')->name('about.leader.add');
+            Route::get('/about/leader/{leader}/get', 'getLeader')->name('about.leader.get');
+            Route::put('/about/leader/{leader}/edit', 'editLeader')->name('about.leader.edit');
+            Route::delete('/about/leader/{leader}', 'deleteLeader')->name('about.leader.delete');
+            Route::post('/about/update', 'update')->name('about.update');
         });
 
         // School Management Routes

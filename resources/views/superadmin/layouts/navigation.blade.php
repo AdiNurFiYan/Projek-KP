@@ -47,6 +47,13 @@
                 </svg>
                 Akun
             </a>
+            <a href="{{ route('super-admin.about') }}" 
+               class="block px-4 py-2.5 transition-colors duration-200 {{ request()->routeIs('super-admin.about') ? 'bg-white/10' : 'hover:bg-white/5' }} flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                About
+            </a>
         </div>
     </div>
     
