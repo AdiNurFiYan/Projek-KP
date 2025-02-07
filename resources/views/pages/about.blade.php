@@ -71,6 +71,7 @@
                                     <div class="flex-1">
                                         <h3 class="text-2xl font-bold text-gray-800">{{ $leader->name }}</h3>
                                         <p class="text-gray-600 mt-1">{{ $leader->position }}</p>
+                                        <p class="text-gray-600 mt-1">Periode: {{ $leader->period_start }} - {{ $leader->period_end }}</p>
                                     </div>
                                 </div>
                             </div>
