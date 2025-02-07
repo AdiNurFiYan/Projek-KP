@@ -6,7 +6,7 @@
     <!-- Header Sidebar -->
     <div class="flex items-center justify-between p-4 border-b border-[#2D2D2D]">
         <div class="flex items-center space-x-3">
-            <img src="{{ asset('images/logo.png') }}" class="h-8 w-auto" alt="Logo" />
+            <img src="{{ asset('images/Kab.Semarang.png') }}" class="h-8 w-auto" alt="Logo" />
             <div class="text-xl font-bold">DIASTRA</div>
         </div>
         <button id="closeSidebar" class="md:hidden text-white hover:text-gray-200">

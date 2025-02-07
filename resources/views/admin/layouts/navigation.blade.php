@@ -5,7 +5,7 @@
 <nav id="sidebar" class="fixed left-0 top-0 h-screen w-60 bg-red-800 text-white transition-transform duration-300 ease-in-out transform md:translate-x-0 -translate-x-full z-50 border-r border-b border-[#2D2D2D]">
    <div class="flex items-center justify-between p-4 border-b border-[#2D2D2D]">
        <div class="flex items-center space-x-3">
-           <img src="path/to/your/logo.png" class="h-8 w-auto" alt="Logo" />
+           <img src="{{ asset('images/Kab.Semarang.png') }}" class="h-8 w-auto" alt="Logo" />
            <div class="text-xl font-bold">DIASTRA</div>
        </div>
        <button id="closeSidebar" class="md:hidden text-white">
