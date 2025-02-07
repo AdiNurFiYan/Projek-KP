@@ -159,12 +159,12 @@
                     <div class="grid grid-cols-2 gap-4 mb-4">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Period Start</label>
-                            <input type="number" name="period_start" required min="1900" max="2100"
+                            <input type="number" name="period_start" required min="1500" max="2500"
                                 class="w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Period End</label>
-                            <input type="number" name="period_end" required min="1900" max="2100"
+                            <input type="number" name="period_end" required min="1500" max="2500"
                                 class="w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
                     </div>
@@ -211,12 +211,12 @@
                     <div class="grid grid-cols-2 gap-4 mb-4">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Period Start</label>
-                            <input type="number" name="period_start" id="edit_period_start" required min="1900" max="2100"
+                            <input type="number" name="period_start" id="edit_period_start" required min="1500" max="2500"
                                 class="w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Period End</label>
-                            <input type="number" name="period_end" id="edit_period_end" required min="1900" max="2100"
+                            <input type="number" name="period_end" id="edit_period_end" required min="1500" max="2500"
                                 class="w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
                     </div>
