@@ -25,8 +25,8 @@ class SuperAdminAboutController extends Controller
         'name' => 'required|string|max:255',
         'position' => 'required|string|max:255',
         'photo' => 'nullable|image|max:2048',
-        'period_start' => 'required|integer|min:1900|max:2100',
-        'period_end' => 'required|integer|min:1900|max:2100|gte:period_start'
+        'period_start' => 'required|integer|min:1500|max:2500',
+        'period_end' => 'required|integer|min:1500|max:2500|gte:period_start'
     ]);
 
     $leader = new Leader();
@@ -128,7 +128,7 @@ public function getLeader(Leader $leader)
 public function update(Request $request)
 {
     $request->validate([
-        'content' => 'required|string',
+        'content' => 'required|string|max:10000',
         'office_photo' => 'nullable|image|max:2048',
         'embed_map_code' => 'nullable|string',
         'address' => 'nullable|string'
