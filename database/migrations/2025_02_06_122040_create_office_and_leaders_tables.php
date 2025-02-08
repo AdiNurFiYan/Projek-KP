@@ -6,20 +6,26 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    public function up()
+    public function up(): void  
     {
-        // Combined table for about and office information
-        Schema::create('office_information', function (Blueprint $table) {
+        Schema::dropIfExists('leaders');
+
+        Schema::create('leaders', function (Blueprint $table) {
             $table->id();
-            $table->text('content');
-            $table->string('office_photo_path')->nullable();  // Add nullable()
-            $table->text('embed_map_code')->nullable();
-            $table->string('address')->nullable();
+            $table->string('name');
+            $table->string('position');
+            $table->string('photo_path')->nullable();
+            $table->integer('period_start');
+            $table->integer('period_end');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
+    }
 
-        // Table for leader information
+    public function down(): void
+    {
+        Schema::dropIfExists('leaders');
+
         Schema::create('leaders', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -30,11 +36,5 @@ return new class extends Migration
             $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
-    }
-
-    public function down()
-    {
-        Schema::dropIfExists('office_information');
-        Schema::dropIfExists('leaders');
     }
 };

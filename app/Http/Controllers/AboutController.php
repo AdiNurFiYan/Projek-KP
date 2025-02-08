@@ -65,8 +65,8 @@ class AboutController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'position' => ['required', 'string', 'max:255'],
             'photo' => ['required', 'image', 'max:2048'],
-            'period_start' => ['required', 'integer', 'min:1900', 'max:2100'],
-            'period_end' => ['required', 'integer', 'min:1900', 'max:2100', 'gte:period_start'],
+            'period_start' => ['required', 'integer', 'min:1500', 'max:2500'],
+            'period_end' => ['required', 'integer', 'min:1500', 'max:2500', 'gte:period_start'],
         ]);
 
         $photoPath = $request->file('photo')->store('leaders', 'public');
@@ -88,8 +88,8 @@ class AboutController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'position' => ['required', 'string', 'max:255'],
             'photo' => ['nullable', 'image', 'max:2048'],
-            'period_start' => ['required', 'integer', 'min:1900', 'max:2100'],
-            'period_end' => ['required', 'integer', 'min:1900', 'max:2100', 'gte:period_start'],
+            'period_start' => ['required', 'integer', 'min:1500', 'max:2500'],
+            'period_end' => ['required', 'integer', 'min:1500', 'max:2500', 'gte:period_start'],
         ]);
 
         $leader = Leader::findOrFail($id);
