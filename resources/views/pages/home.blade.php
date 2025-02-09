@@ -19,11 +19,31 @@
             <p class="mt-4 text-white/90 max-w-2xl mx-auto text-sm sm:text-base">
                 Sistem informasi pengelolaan dan pemantauan inventaris aset secara efisien dan terintegrasi
             </p>
+            
+            <!-- Scroll Down Button -->
+            <a href="#cards-section" 
+               class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white cursor-pointer group animate-bounce">
+                <div class="flex flex-col items-center">
+                    <span class="text-sm mb-2">Scroll Down</span>
+                    <svg 
+                        class="w-6 h-6 group-hover:translate-y-1 transition-transform duration-300" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24">
+                        <path 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            stroke-width="2" 
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3">
+                        </path>
+                    </svg>
+                </div>
+            </a>
         </div>
     </div>
 
     <!-- Cards Section with improved layout and accessibility -->
-    <div class="container mx-auto px-4 py-8 md:py-16">
+    <div id="cards-section" class="container mx-auto px-4 py-8 md:py-16 scroll-mt-16">
         <div class="grid md:grid-cols-2 gap-4 md:gap-8 max-w-7xl mx-auto">
             <a href="{{ route('tingkatan-sekolah') }}" class="block focus:outline-none focus:ring-2 focus:ring-[#FFB930] rounded-lg">
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -78,20 +98,25 @@
             </a>
         </div>
     </div>
+
+    <!-- Styles -->
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in-delay {
+            animation: fadeIn 0.8s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </x-app-layout>
-
-<style>
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
-}
-
-.animate-fade-in-delay {
-    animation: fadeIn 0.8s ease-out 0.2s forwards;
-    opacity: 0;
-}
-</style>
