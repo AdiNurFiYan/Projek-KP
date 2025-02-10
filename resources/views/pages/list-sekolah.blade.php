@@ -31,58 +31,61 @@
             </div>
 
             <!-- Table Section -->
-            <div class="overflow-x-auto">
-                <div class="flex justify-between items-center mb-4">
-                <div class="text-sm text-gray-500">
-    Menampilkan daftar sekolah {{ $jenis ?? '' }} di wilayah {{ $korwil->nama }}
-</div>
-                    <div class="flex items-center">
-                        <span class="mr-2">Per Page</span>
-                        <select
-                            onchange="window.location.href = this.value"
-                            class="border rounded py-1"
-                        >
-                            @foreach([10, 25, 50, 100] as $size)
-                                <option
-                                    value="{{ request()->fullUrlWithQuery(['per_page' => $size]) }}"
-                                    {{ request()->get('per_page', 10) == $size ? 'selected' : '' }}
-                                >
-                                    {{ $size }}
-                                </option>
-                            @endforeach
-                        </select>
+            <div class="overflow-hidden">
+                <div class="flex justify-between items-center mb-6 gap-4">
+                    <div class="text-sm text-gray-500">
+                        Menampilkan daftar sekolah {{ $jenis ?? '' }} di wilayah {{ $korwil->nama }}
                     </div>
+                    <select
+                        onchange="window.location.href = this.value"
+                        class="bg-white border border-blue-300 text-blue-600 rounded-lg pl-3 pr-8 py-1.5 cursor-pointer text-sm font-medium hover:border-blue-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 min-w-[80px]"
+                    >
+                        @foreach([10, 25, 50, 100] as $size)
+                            <option
+                                value="{{ request()->fullUrlWithQuery(['per_page' => $size]) }}"
+                                {{ request()->get('per_page', 10) == $size ? 'selected' : '' }}
+                            >
+                                {{ $size }}
+                            </option>
+                        @endforeach
+                    </select>
                 </div>
 
-                <table class="min-w-full">
-                    <thead>
-                        <tr class="bg-blue-500">
-                            <th class="px-6 py-3 text-left text-white font-semibold">No</th>
-                            <th class="px-6 py-3 text-left text-white font-semibold">Nama Sekolah</th>
-                            <th class="px-6 py-3 text-left text-white font-semibold">Jenis</th>
-                            <th class="px-6 py-3"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    @forelse($sekolahs as $index => $sekolah)
-                        <tr class="bg-[#FFB930] border-b border-white hover:bg-[#FFA500] cursor-pointer" 
-                            onclick="window.location='{{ route('korwil.sarpras', ['korwil' => $korwil->id, 'sekolah' => $sekolah->id]) }}'">
-                            <td class="px-6 py-4">{{ $sekolahs->firstItem() + $index }}</td>
-                            <td class="px-6 py-4">{{ $sekolah->nama }}</td>
-                            <td class="px-6 py-4">{{ $sekolah->jenis }}</td>
-                            <td class="px-6 py-4 text-right">
-                                <svg class="w-6 h-6 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </td>
-                        </tr>
-                    @empty
-                        <tr>
-                            <td colspan="4" class="px-6 py-4 text-center">Tidak ada data sekolah</td>
-                        </tr>
-                    @endforelse
-                    </tbody>
-                </table>
+                <div class="rounded-[20px] overflow-hidden">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr>
+                                <th class="px-6 py-4 bg-blue-500 text-left text-white font-semibold rounded-tl-[20px]">No</th>
+                                <th class="px-6 py-4 bg-blue-500 text-left text-white font-semibold">Nama Sekolah</th>
+                                <th class="px-6 py-4 bg-blue-500 text-left text-white font-semibold">Jenis</th>
+                                <th class="px-6 py-4 bg-blue-500 rounded-tr-[20px]"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse($sekolahs as $index => $sekolah)
+                                <tr class="bg-[#FFB930] hover:bg-[#FFA500] cursor-pointer transition-colors" 
+                                    onclick="window.location='{{ route('korwil.sarpras', ['korwil' => $korwil->id, 'sekolah' => $sekolah->id]) }}'">
+                                    <td class="px-6 py-4 text-black">{{ $sekolahs->firstItem() + $index }}</td>
+                                    <td class="px-6 py-4 text-black">{{ $sekolah->nama }}</td>
+                                    <td class="px-6 py-4">
+                                        <span class="px-4 py-1 bg-white text-black rounded-full text-sm">
+                                            {{ $sekolah->jenis }}
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <svg class="w-6 h-6 inline-block text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </td>
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="4" class="px-6 py-8 text-center bg-gray-50">Tidak ada data sekolah</td>
+                                </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
 
                 <!-- Pagination -->
                 <div class="mt-4 flex justify-between items-center">
