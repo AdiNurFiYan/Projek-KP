@@ -5,8 +5,6 @@
         <div class="absolute inset-0 flex flex-col items-center justify-center">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wider mb-4">
                 Data Barang
-            </h1>
-            <div class="h-1 w-24 bg-blue-500 rounded-full"></div>
         </div>
     </div>
 
