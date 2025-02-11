@@ -6,7 +6,7 @@
                 Selamat Datang, {{ Auth::guard('admin')->user()->name }}
             </h1>
             <p class="text-gray-600 mt-1">
-                {{ now()->format('l, d F Y') }}
+                {{ now()->locale('id')->isoFormat('dddd, D MMMM Y') }}
             </p>
         </div>
 
