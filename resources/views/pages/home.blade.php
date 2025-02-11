@@ -11,7 +11,7 @@
         
         <div class="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
             <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 animate-fade-in">
-                Data Inventaris Aset
+                Sistem Informasi Aset
             </h1>
             <h2 class="text-xl sm:text-2xl md:text-4xl font-bold text-white animate-fade-in-delay">
                 DISDIKBUDPORA

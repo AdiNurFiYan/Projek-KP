@@ -3,7 +3,7 @@
     <div class="flex items-center space-x-2">
     <a href="/" class="flex items-center space-x-2 hover:opacity-90 transition-opacity duration-300">
         <img src="{{ asset('images/Kab.Semarang.png') }}" alt="DIASTRA Logo" class="max-h-16 max-w-full object-contain">
-        <span class="text-white text-xl md:text-2xl font-inter font-bold">DIASTRA</span>
+        <span class="text-white text-xl md:text-2xl font-inter font-bold">SIADIK</span>
     </a>
 </div>
 
