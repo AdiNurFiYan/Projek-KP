@@ -2,9 +2,12 @@
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
     <div class="flex items-center space-x-2">
     <a href="/" class="flex items-center space-x-2 hover:opacity-90 transition-opacity duration-300">
-        <img src="{{ asset('images/Kab.Semarang.png') }}" alt="DIASTRA Logo" class="max-h-16 max-w-full object-contain">
-        <span class="text-white text-xl md:text-2xl font-inter font-bold">SIADIK</span>
-    </a>
+    <img src="{{ asset('images/Kab.Semarang.png') }}" alt="DIASTRA Logo" class="max-h-16 max-w-full object-contain">
+    <div class="text-white font-inter">
+        <span class="text-xl md:text-2xl font-bold">SIADIK</span>
+        <div class="text-xs md:text-sm">SISTEM INFORMASI ASET DISDIK</div>
+    </div>
+</a>
 </div>
 
         <!-- Mobile Menu Button -->
