@@ -9,7 +9,7 @@
         >
         <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/40"></div>
         
-        <div class="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
+        <div class="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center min-h-[500px] sm:min-h-[600px] md:min-h-[830px]">
             <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 animate-fade-in">
                 Sistem Informasi Aset
             </h1>
@@ -19,26 +19,15 @@
             <p class="mt-4 text-white/90 max-w-2xl mx-auto text-sm sm:text-base">
                 Sistem informasi pengelolaan dan pemantauan inventaris aset secara efisien dan terintegrasi
             </p>
-            
             <!-- Scroll Down Button -->
-            <a href="#cards-section" 
-               class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white cursor-pointer group animate-bounce">
-                <div class="flex flex-col items-center">
-                    <span class="text-sm mb-2">Scroll Down</span>
-                    <svg 
-                        class="w-6 h-6 group-hover:translate-y-1 transition-transform duration-300" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24">
-                        <path 
-                            stroke-linecap="round" 
-                            stroke-linejoin="round" 
-                            stroke-width="2" 
-                            d="M19 14l-7 7m0 0l-7-7m7 7V3">
-                        </path>
-                    </svg>
-                </div>
-            </a>
+            <div class="absolute bottom-0 left-0 right-0 flex justify-center pb-10">
+    <a href="#cards-section" class="flex flex-col items-center animate-bounce">
+        <span class="text-white text-sm font-medium font-[Inter] mb-1">Gulir ke bawah</span>
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+    </a>
+</div>
         </div>
     </div>
 

@@ -17,32 +17,35 @@
                 @endif
 
                 <div class="bg-white rounded-lg shadow-sm">
-                <div class="flex border-b bg-white overflow-hidden">
+                <!-- Responsive Navigation Container -->
+                <div class="w-full bg-white border-b overflow-x-auto">
+                    <div class="flex flex-nowrap min-w-full">
                         <a href="{{ route('admin.sekolah.detail', $sekolah) }}" 
-                            class="{{ Request::routeIs('admin.sekolah.detail') ? 'border-b-2 border-yellow-400 bg-[#FFB930] text-black font-medium' : 'text-gray-600 hover:bg-yellow-50/50 hover:text-black' }} px-6 py-3 transition-all duration-200">
+                            class="{{ Request::routeIs('admin.sekolah.detail') ? 'border-b-2 border-yellow-400 bg-[#FFB930] text-black font-medium' : 'text-gray-600 hover:bg-yellow-50/50 hover:text-black' }} px-4 sm:px-6 py-3 transition-all duration-200 whitespace-nowrap">
                             Identitas Sekolah
                         </a>
                         <a href="{{ route('admin.sekolah.tanah-denah', $sekolah) }}" 
-                            class="{{ Request::routeIs('admin.sekolah.tanah-denah') ? 'border-b-2 border-yellow-400 bg-[#FFB930] text-black font-medium' : 'text-gray-600 hover:bg-yellow-50/50 hover:text-black' }} px-6 py-3 transition-all duration-200">
+                            class="{{ Request::routeIs('admin.sekolah.tanah-denah') ? 'border-b-2 border-yellow-400 bg-[#FFB930] text-black font-medium' : 'text-gray-600 hover:bg-yellow-50/50 hover:text-black' }} px-4 sm:px-6 py-3 transition-all duration-200 whitespace-nowrap">
                             Tanah & Denah
                         </a>
                         <a href="{{ route('admin.sekolah.foto-sekolah', $sekolah) }}"
-                            class="{{ Request::routeIs('admin.sekolah.foto-sekolah') ? 'border-b-2 border-yellow-400 bg-[#FFB930] text-black font-medium' : 'text-gray-600 hover:bg-yellow-50/50 hover:text-black' }} px-6 py-3 transition-all duration-200">
+                            class="{{ Request::routeIs('admin.sekolah.foto-sekolah') ? 'border-b-2 border-yellow-400 bg-[#FFB930] text-black font-medium' : 'text-gray-600 hover:bg-yellow-50/50 hover:text-black' }} px-4 sm:px-6 py-3 transition-all duration-200 whitespace-nowrap">
                             Foto Sekolah
                         </a>
                         <a href="{{ route('admin.sekolah.laporan-aset', $sekolah) }}"
-                            class="{{ Request::routeIs('admin.sekolah.laporan-aset') ? 'border-b-2 border-yellow-400 bg-[#FFB930] text-black font-medium' : 'text-gray-600 hover:bg-yellow-50/50 hover:text-black' }} px-6 py-3 transition-all duration-200">
+                            class="{{ Request::routeIs('admin.sekolah.laporan-aset') ? 'border-b-2 border-yellow-400 bg-[#FFB930] text-black font-medium' : 'text-gray-600 hover:bg-yellow-50/50 hover:text-black' }} px-4 sm:px-6 py-3 transition-all duration-200 whitespace-nowrap">
                             Laporan Aset
                         </a>
                         <a href="{{ route('admin.sekolah.data-sarpras', $sekolah) }}"
-                            class="{{ Request::routeIs('admin.sekolah.data-sarpras') ? 'border-b-2 border-yellow-400 bg-[#FFB930] text-black font-medium' : 'text-gray-600 hover:bg-yellow-50/50 hover:text-black' }} px-6 py-3 transition-all duration-200">
+                            class="{{ Request::routeIs('admin.sekolah.data-sarpras') ? 'border-b-2 border-yellow-400 bg-[#FFB930] text-black font-medium' : 'text-gray-600 hover:bg-yellow-50/50 hover:text-black' }} px-4 sm:px-6 py-3 transition-all duration-200 whitespace-nowrap">
                             Data Sarpras
                         </a>
                         <a href="{{ route('admin.sekolah.detail-data-sarpras', $sekolah) }}"
-                            class="{{ Request::routeIs('admin.sekolah.data-sarpras') ? 'border-b-2 border-yellow-400 bg-[#FFB930] text-black font-medium' : 'text-gray-600 hover:bg-yellow-50/50 hover:text-black' }} px-6 py-3 transition-all duration-200">
+                            class="{{ Request::routeIs('admin.sekolah.detail-data-sarpras') ? 'border-b-2 border-yellow-400 bg-[#FFB930] text-black font-medium' : 'text-gray-600 hover:bg-yellow-50/50 hover:text-black' }} px-4 sm:px-6 py-3 transition-all duration-200 whitespace-nowrap">
                             Detail Data Sarpras
                         </a>
                     </div>
+                </div>
 
                     <div class="p-6 bg-orange-50">
                         <div class="mb-8">
